@@ -9,7 +9,24 @@ class YachtBooking extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'user_id',
+        'name',
+        'email',
+        'phone_number',
+        'passenger',
+        'children',
+        'yacht_id',
+        'date',
+        'trip_length',
+        'destination_id',
+        'experiences_id',
+        'price',
+        'preferences',
+        'id_card',
+        'paid',
+        'booking_trx_id',
+    ];
 
     public static function generateUniqueTrxId() {
         $prefix = 'IYB';
@@ -37,6 +54,6 @@ class YachtBooking extends Model
 
     public function experiences()
     {
-        return $this->hasMany(Experiences::class);
+        return $this->hasMany(Experience::class);
     }
 }

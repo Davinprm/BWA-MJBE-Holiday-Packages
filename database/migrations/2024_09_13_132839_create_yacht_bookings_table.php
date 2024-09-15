@@ -25,7 +25,7 @@ return new class extends Migration
             $table->foreignId('destination_id')->constrained()->cascadeOnDelete();
             $table->foreignId('experiences_id')->constrained()->cascadeOnDelete();
             $table->string('price');
-            $table->string('preferences');
+            $table->text('preferences');
             $table->string('id_card');
             $table->boolean('paid')->default(false);
             $table->boolean('booking_trx_id');

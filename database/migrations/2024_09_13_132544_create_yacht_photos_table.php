@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('yacht_photos', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('video')->nullable();
-            $table->string('cabin');
+            $table->string('image')->nullable();
+            $table->string('cabin')->nullable();
             $table->string('blueprint')->nullable();
             $table->foreignId('yacht_id')->constrained()->cascadeOnDelete();
             $table->softDeletes();

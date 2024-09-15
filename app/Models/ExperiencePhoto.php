@@ -14,6 +14,6 @@ class ExperiencePhoto extends Model
 
     public function experience()
     {
-        return $this->belongsTo(Experiences::class);
+        return $this->belongsTo(Experience::class);
     }
 }

@@ -16,10 +16,11 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('thumbnail');
             $table->string('name')->unique();
-            $table->string('highlight_text');
-            $table->string('description');
-            $table->boolean('quote')->nullable();
-            $table->string('others')->nullable();
+            $table->boolean('is_available')->default(true);
+            $table->text('highlight_text');
+            $table->text('description');
+            $table->text('quote')->nullable();
+            $table->text('others')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
